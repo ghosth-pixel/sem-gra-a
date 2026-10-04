@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tigelinha • Painel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-icon"><img class="brand-logo-img" src="tigelinha-logo.webp" alt="Tigelinha"></div><div><b>TIGELINHA</b><span>Control Center</span></div></div>
+    <nav>
+      <button class="nav active" data-page="dashboard">▦ <span>Dashboard</span></button>
+      <button class="nav" data-page="sales">💰 <span>Vendas</span></button>
+      <button class="nav" data-page="stock">📦 <span>Estoque</span></button>
+      <button class="nav" data-page="clients">👥 <span>Clientes</span></button>
+      <button class="nav" data-page="products">🛍️ <span>Produtos</span></button>
+      <button class="nav" data-page="finance">📈 <span>Financeiro</span></button>
+      <button class="nav" data-page="automation">🤖 <span>Automação</span></button>
+      <button class="nav" data-page="audit">🕵️ <span>Auditoria</span></button>
+      <button class="nav" data-page="team">🛡️ <span>Equipe</span></button>
+      <button class="nav" data-page="settings">⚙️ <span>Configurações</span></button>
+    </nav>
+    <div class="side-bottom">
+      <div class="secure">🔒 <div><b>Tigelinha</b><small>Central de gestão</small></div></div>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="mobile-brand"><img class="brand-logo-img" src="tigelinha-logo.webp" alt="Tigelinha"> <b>TIGELINHA</b></div>
+      <div class="global-search"><span>⌕</span><input id="globalSearch" placeholder="Pesquisar cliente, produto, key, nick ou ID..."><kbd>CTRL K</kbd></div>
+      <div class="top-actions"><button class="icon-btn" title="Nova venda" data-page="sales">＋</button><div class="user-chip"><div class="avatar" id="userAvatar">T</div><div><b id="userName">...</b><small id="userRole">...</small></div></div><button class="icon-btn" title="Sair" data-action="logout">↪</button></div>
+    </header>
+    <div id="content"></div>
+  </main>
+</div>
+
+<div id="modalRoot"></div>
+<div id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
